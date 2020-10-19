@@ -1,0 +1,29 @@
+<form>
+  <select class="form-control" name="major">
+    <option value="">Select Origination</option>
+    <option *ngFor="let city of Cities" [value]="city">
+      {{city}}
+    </option>
+  </select>
+  <br><br>
+  <select class="form-control" name="major">
+    <option value="">Select Destination</option>
+    <option *ngFor="let city of Cities" [value]="city">
+      {{city}}
+    </option>
+  </select>
+  <br><br>
+  <label for="travelDate">Enter travel date:</label>
+  <input class="form-control" type="date" id="travelDate" name="travelDate" min="2020-10-01">
+  <br><br>
+
+  <label for="numOfTravelers">Num of travelers:</label>
+  <input class="form-control" type="number" id="numOfTravelers" (click)="addToList()" name="numOfTravelers" [(ngModel)]="numOfTravelers">
+  <br><br>
+
+  <button class="form-control btn btn-primary" (click)="addToList()">Submit</button>
+  <br><br>
+
+  <h1 for="price">The price of travel will be: ${{price}}</h1>
+  <br><br>
+</form>
