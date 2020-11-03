@@ -9,7 +9,7 @@ import { TravelComponent } from './travel/travel.component';
 const routes: Routes = [
   {path: 'todo', component: TravelComponent},
   {path: 'about', component: AboutComponent},
-  {path: '', redirectTo: '/todo', pathMatch: 'full'}
+
 ];
 
 
