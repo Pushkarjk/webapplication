@@ -5,19 +5,22 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TravelComponent } from './travel/travel.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path: 'todo', component: TravelComponent},
+  {path: 'pricing', component: TravelComponent},
   {path: 'about', component: AboutComponent},
-
+  {path: '', component: HomeComponent},
 ];
 
+// {path: '', redirectTo: '/', pathMatch: 'full'}
 
 @NgModule({
   declarations: [
     AppComponent,
     TravelComponent,
-    AboutComponent
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
